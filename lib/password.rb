@@ -10,13 +10,13 @@ class Password
   end
 
   def get_password
-    return @password
+    @password
   end
 
   def generate_new_password!(options)
-    password = Array.new
+    password = []
 
-    (1..PASSWORD_LENGTH).each do |i|
+    (1..PASSWORD_LENGTH).each do |_i|
       password.push(rand(options) + 1)
     end
 
