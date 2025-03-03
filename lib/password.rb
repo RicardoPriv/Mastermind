@@ -1,4 +1,6 @@
 class Password
+  PASSWORD_LENGTH = 4
+
   def initialize
     @password = nil
   end
@@ -11,10 +13,10 @@ class Password
     return @password
   end
 
-  def generate_new_password!(length, options)
+  def generate_new_password!(options)
     password = Array.new
 
-    (1..length).each do |i|
+    (1..PASSWORD_LENGTH).each do |i|
       password.push(rand(options) + 1)
     end
 
